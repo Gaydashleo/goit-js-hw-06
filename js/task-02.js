@@ -1,3 +1,4 @@
+"use strict";
 const ingredients = [
   'Potatoes',
   'Mushrooms',
@@ -6,3 +7,11 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
+const PotatoesEl= document.createElement('li');
+
+// PotatoesRef.classList.add('item');
+// PotatoesRef.textContent = "Potatoes";
+
+
+
+console.log(PotatoesEl);
