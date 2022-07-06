@@ -1,17 +1,33 @@
 "use strict";
+// const ingredients = [
+//   'Potatoes',
+//   'Mushrooms',
+//   'Garlic',
+//   'Tomatos',
+//   'Herbs',
+//   'Condiments',
+// ];
+// const potatoesEl= document.createElement('li');
+
+// potatoesEl.classList.add('item');
+// potatoesEl.textContent = "Potatoes";
+
+// console.log(potatoesEl);
+
+// console.dir(potatoesEl);
+
+
 const ingredients = [
-  'Potatoes',
-  'Mushrooms',
-  'Garlic',
-  'Tomatos',
-  'Herbs',
-  'Condiments',
+  'Картошка',
+  'Грибы',
+  'Чеснок',
+  'Помидоры',
+  'Зелень',
+  'Приправы',
 ];
-const PotatoesEl= document.createElement('li');
 
-// PotatoesRef.classList.add('item');
-// PotatoesRef.textContent = "Potatoes";
+const ulEl = document.querySelector('#ingredients');
 
+const list = ingredients.reduce((str, item) => str + `<li>${item}</li>`, '');
 
-
-console.log(PotatoesEl);
+ulEl.innerHTML = list;
