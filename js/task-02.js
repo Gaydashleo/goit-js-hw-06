@@ -1,33 +1,19 @@
 "use strict";
-// const ingredients = [
-//   'Potatoes',
-//   'Mushrooms',
-//   'Garlic',
-//   'Tomatos',
-//   'Herbs',
-//   'Condiments',
-// ];
-// const potatoesEl= document.createElement('li');
-
-// potatoesEl.classList.add('item');
-// potatoesEl.textContent = "Potatoes";
-
-// console.log(potatoesEl);
-
-// console.dir(potatoesEl);
-
-
 const ingredients = [
-  'Картошка',
-  'Грибы',
-  'Чеснок',
-  'Помидоры',
-  'Зелень',
-  'Приправы',
+  'Potatoes',
+  'Mushrooms',
+  'Garlic',
+  'Tomatos',
+  'Herbs',
+  'Condiments',
 ];
+const list = document.querySelector(`#ingredients`);
+const ingredientEl = (elements) => elements.map(element => {
+  const ingredient = document.createElement("li");
+  ingredient.classList.add("item");
+  ingredient.textContent = element;
 
-const ulEl = document.querySelector('#ingredients');
-
-const list = ingredients.reduce((str, item) => str + `<li>${item}</li>`, '');
-
-ulEl.innerHTML = list;
+  return ingredient;
+});
+const createdIngredientEl = ingredientEl(ingredients);
+list.append(...createdIngredientEl);
