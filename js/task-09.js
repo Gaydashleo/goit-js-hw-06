@@ -5,7 +5,7 @@ const spanEl = document.querySelector(".color");
 
 function changeColor() {
   bodyEl.style.backgroundColor = getRandomHexColor();
-  spanEl.textContent = getRandomHexColor();
+  spanEl.textContent = bodyEl.style.backgroundColor;
 };
 
 
