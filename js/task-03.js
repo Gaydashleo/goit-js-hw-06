@@ -13,10 +13,14 @@ const images = [
   },
 ];
 
-const ulEl = document.querySelector('gallery');
+
+const ulEl = document.querySelector('.gallery');
 
 const imageMarkup = images.reduce((string, item) =>
 string + `<li><img src = "${item.url}" alt = "${item.alt}" width = "100" height = "100"></li>`,"");
-  
+
 ulEl.insertAdjacentHTML("afterbegin", imageMarkup);
-ulEl.style
+ulEl.setAttribute("style", "list-style-type:circle; display: inline-flex;");
+
+
+
